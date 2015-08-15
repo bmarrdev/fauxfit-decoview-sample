@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/activity_horizontal_margin"
+                tools:context=".FauxFitActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textActivity3">
+
+        <TextView
+            android:id="@+id/textPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:id="@+id/textRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textPercentage"
+            android:layout_centerHorizontal="true"
+            android:maxWidth="200dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <com.hookedonplay.decoviewlib.DecoView
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            custom:lineWidth="26dp"
+            android:id="@+id/dynamicArcView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </com.hookedonplay.decoviewlib.DecoView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageActivity1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/circle_activity1"
+        android:contentDescription="@string/fit_cycling"
+        android:padding="12dp"
+        android:src="@drawable/ic_activity1"/>
+
+    <ImageView
+        android:id="@+id/imageActivity3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_activity3"
+        android:padding="12dp"
+        android:src="@drawable/ic_activity3"/>
+
+    <ImageView
+        android:id="@+id/imageActivity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageActivity3"
+        android:background="@drawable/circle_activity2"
+        android:contentDescription="@string/fit_running"
+        android:padding="12dp"
+        android:src="@drawable/ic_activity2"/>
+
+    <TextView
+        android:id="@+id/textActivity3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageActivity3"
+        android:layout_toEndOf="@+id/imageActivity1"
+        android:layout_toLeftOf="@+id/imageActivity2"
+        android:layout_toRightOf="@+id/imageActivity1"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/textActivity1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageActivity1"
+        android:layout_alignEnd="@+id/imageActivity1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/imageActivity1"
+        android:gravity="center_horizontal"
+        android:paddingLeft="4dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/textActivity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageActivity2"
+        android:layout_alignLeft="@+id/imageActivity2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/imageActivity2"
+        android:gravity="center_horizontal"
+        android:paddingRight="4dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+</RelativeLayout>
