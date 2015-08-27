@@ -30,7 +30,7 @@
 
         <com.hookedonplay.decoviewlib.DecoView
             xmlns:custom="http://schemas.android.com/apk/res-auto"
-            custom:lineWidth="26dp"
+            custom:dv_lineWidth="26dp"
             android:id="@+id/dynamicArcView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
